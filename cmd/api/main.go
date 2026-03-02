@@ -36,7 +36,7 @@ func main() {
 	r.Use(middleware.CORSMiddleware(cfg.CORSOrigin))
 
 	// Public routes
-	r.POST("/oauth/token", h.Login)
+	r.POST("/oauth2/token", h.Login)
 
 	// Protected routes
 	api := r.Group("")
